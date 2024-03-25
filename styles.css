@@ -38,9 +38,10 @@ nav ul{
     padding: 8px;
     background-color:hsl(276, 35%, 40%);
     left: -950px;
+    opacity: 0;
     top:70px;
     width:100%;
-    transition: left 1.5s cubic-bezier(0,.93,0,1.04);
+    transition: left 1.5s cubic-bezier(0,.93,0,1.04), opacity .7s ease-in;
     text-align: center;
 }
 nav ul li{
@@ -66,6 +67,7 @@ nav ul li a {
 }
 .orignal-position{
     left:0px;
+    opacity: 1;
 }
 
 
