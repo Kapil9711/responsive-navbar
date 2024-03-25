@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding:0;
+    line-height: 1.4;
+    box-sizing: border-box;
+    
+}
+
+header{
+    height: 100vh;
+    background-color: hsl(30 100% 80%);
+}
+
+nav{
+    position: fixed;
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(249, 35%, 56%);
+    gap:16px;
+    align-items: center;
+    /* border:solid; */
+    padding:8px 20px;
+    color:hsl(249, 35%, 15%);
+}
+
+nav h1{
+    font-size: 2rem;
+}
+nav .icons{
+    font-size: 1.8rem;
+    text-align: right;
+}
+
+nav ul{
+    list-style: none;
+    position: absolute;
+    padding: 8px;
+    background-color:hsl(276, 35%, 40%);
+    left: -950px;
+    top:70px;
+    width:100%;
+    transition: left 1.5s cubic-bezier(0,.93,0,1.04);
+    text-align: center;
+}
+nav ul li{
+    font-size: 1.5rem;
+    margin-top: 5px 0 5px;
+    padding: 4px 12px;
+    transition: background-color .4s ease;
+    cursor: pointer;
+    border-radius: 200px;
+    /* width: fit-content;
+    margin: 0 auto; */
+   
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:hsl(249, 35%, 15%);
+
+}
+
+.hide{
+    display: none;
+}
+.orignal-position{
+    left:0px;
+}
+
+
+
+nav .icons-social{
+    display: none;
+}
+
+@media (pointer:fine){
+    ul li:hover{
+        background-color:hsl(276, 35%, 65%);
+        outline: 3px solid hsl(319, 45%, 85%);
+        
+        outline-offset: 3px;
+    }
+    ul li:active{
+        background-color: hsl(276, 35%, 45%);
+        
+    }
+}
+
+@media (max-width:330px){
+    nav h1{
+        font-size: 1.3rem;
+    }
+   nav .icons{
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width:900px){
+    nav{
+        grid-template-columns: .8fr 3fr .8fr;
+    }
+    nav h1{
+        
+        text-align: center;
+    }
+    .icons{
+        display: none;
+    }
+    nav ul{
+        position: initial;
+        display: flex;
+        gap: 10px;   
+        justify-content: center;
+        background-color: inherit;
+        
+    
+    }
+
+    nav .icons-social{
+        display: initial;
+        font-size: 1.7rem;
+        text-align: center;
+        
+    }
+    nav .icons-social i{
+        margin-right: 16px;
+    }
+    
+
+}
